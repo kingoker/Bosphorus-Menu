@@ -2,236 +2,232 @@
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
-    font-family: sans-serif;
+    font-family: "Montserrat", sans-serif;
 }
 a{
     text-decoration: none;
 }
-
-.lock{
-    overflow: hidden;
+ul, ul li{
+    list-style: none;
+    text-decoration: none;
 }
-.header{
-    height: 70px;
-    width: 100%;
-    background-color: #640D10;
-    display: flex;
-    justify-content: center;
-    padding: 0px 30px;
-    align-items: center;
-    z-index: 99;
-    position: fixed;
-    top: 0;
-    left: 0;
-    box-shadow: 0px 5px 10px 0px rgba(38,0,1,1);
-    -webkit-box-shadow: 0px 5px 10px 0px rgba(38,0,1,1);
-    -moz-box-shadow: 0px 5px 10px 0px rgba(38,0,1,1);
-}
-.header__logo{
-    display: block;
-    height: 60px;
-}
-.logo{
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-}
-.logo:hover{
-    -webkit-filter: drop-shadow(0% 0px 5px red);
-    filter: drop-shadow(0px 0px 5px red);
-}
-.menu__icon{
-    display: none;
-}
-.main{
-    padding-top: 70px;
-}
-
-/* Sidebar */
-.main__sidebar {
-    height: 100%;
-    width: 350px;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    background-color: #640D10;
-    overflow-x: hidden;
-    padding: 100px 10px;
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-}
-.header__list{
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-}
-.sidebar__link{
-    display: block;
-    padding: 10px 20px;
-    background-color: #7b0f12;
-    color: #fff;
-    font-size: 24px;
-    border-radius: 5px;
-}
-.sidebar__link:hover, .sidebar__link-active{
-    background-color: #640D10;
-    border-right: 1px solid #a62e32;
-    border-left: 1px solid #a62e32;
-}
-
-.menu__container{
-    margin-left: 350px;
-    padding: 0px 40px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-
-
-/* Food */
-.food__container{
-    margin-top: 30px;
-}
-.food__title{
-    text-align: center;
-    color: #640D10;
-    font-weight: 900;
-    font-size: 32px;
-    margin-bottom: 15px;
-}
-.food__list{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 15px;
-}
-.food__item{
-    width: 325px;
-    background-color: #640D10;
-    padding: 15px;
-    border-radius: 13px;
-}
-
-.food__imgBlock{
-    position: relative;
-    width: 100%;
-    height: 300px;
-    border-radius: 10px;
-    overflow: hidden;
-    border: 2px solid #fff;
-}
-.food__img{
+img{
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
-.food__price{
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    z-index: 1;
-    display: block;
-    padding: 5px 10px;
-    background-color: #fff;
-    border-radius: 7px 0px 0px 0px;
-    font-weight: 700;
+
+
+/* main styles */
+.body{
+    background-color: rgb(209, 209, 214);
+}
+.container{
+    padding: 0px 3em;
+}
+
+
+/* Header */
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255);
+    border-radius: 0px 0px 7px 7px;
+    padding: 10px 0px;
+    box-shadow: 0px 4px 8px 0px rgba(0,0,0,0.1);
+}
+.header__container{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header__logo{
+    display: flex;
+    align-items: center;
+    height: 30px;
+    color: rgb(255, 179, 0);
+    filter: url(#filter_B);
+}
+.header__logo img{
+    width: 30px;
+    object-fit: contain;
+    
+}
+.logo__text{
+    line-height: 14px;
+    font-weight: 400;
+}
+.header__search{
+    cursor: pointer;
+    color: rgb(255, 179, 0);
+    font-size: 20px;
+}
+.header__list{
+    display: flex;
+    gap: 30px;
+}
+.header__item a{
     font-size: 18px;
+    display: flex;
+    color: rgb(255, 179, 0);
+    transition: color 0.5s ease;
 }
-.food__name{
+.header__item a:hover, .header__item-active a{
+    color: rgb(152, 109, 0);
+}
+
+
+/* Menu */
+.menu{
+    border-radius: 30px 30px 0px 0px;
+    margin-top: 100px;
+    background-color: rgb(242, 242, 247);
+    min-height: 100vh;
+}
+.menu__list_container{
+    display: flex;
+    flex-direction: column;
+    gap: 70px;
+}
+.category__name{
+    color: rgb(174, 174, 178);
+    font-weight: 500;
+    margin-bottom: 14px;
+}
+.menu__logo{
+    width: 200px;
+    height: 100px;
+    display: flex;
+    justify-self: center;
+    padding-top: -30px;
+    border-radius: 30px;
+}
+.menu__logo img{
+    object-fit: contain;
+    margin-top: -40px;
+    background-color: rgb(242, 242, 247);
+    border-radius: 17px;
+}
+.menu__list{
+    display: flex;
+    gap: 10px;
+}
+.menu__item{
+    max-width: 333px;
+}
+.menu__item_content{
+    color: #696969;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 10px;
+    transition: all 0.5s ease;
+    overflow: hidden;
+}
+.menu__item_content:hover{
+    box-shadow: 0px 4px 8px 0px rgba(0,0,0,0.1);
+}
+.menu__description{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.menu__img{
+    height: 400px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.menu__img video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.dish__name{
     font-size: 24px;
-    text-align: center;
-    font-weight: 700;
-    color: #fff4de;
-    margin-top: 10px;
+    color: rgb(47, 47, 47);
+    font-size: 500;
+    margin-bottom: 10px;
+    transition: all 0.5s ease;
 }
-.food__description{
-    text-align: center;
-    margin-top: 7px;
-    color: #ffdbdc;
-    font-size: 14px;
+.menu__item_content:hover .dish__name{
+    color: rgb(255, 179, 0);
+}
+.dish__description{
+    font-size: 17px;
+    font-weight: 300;
+}
+.dish_price{
+    font-size: 24px;
+    color: #a8a8a8;
+}
+
+
+/* Menu PopUp full information */
+.popup{
+    z-index: 100;
+    display: none;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.7);
+    backdrop-filter: blur(5px);
+}
+.popup__content{
+    display: flex;
+    gap: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 50px 30px 30px 30px;
+    border-radius: 10px;
+    background-color: #fff;
+    overflow: auto;
+}
+.popup__buttons{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    display: flex;
+    gap: 5px;
+}
+.popup__close{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: rgb(255, 94, 94);
+    cursor: pointer;
+}
+.popup__close-grey{
+    background-color: #e8e8e8;
+    cursor: auto;
+}
+.popup__photos_main {
+    width: 400px;
+    height: 500px;
+    margin-bottom: 10px;
+}
+.popup__photos_thumbs{
+    display: flex;
+    width: 400px;
+    gap: 10px;
+}
+.popup__photos_thumbs a{
+    display: block;
+    height: 100px;
 }
 
 
 
-
-@media (max-width: 859px){
-    .header{
-        justify-content: space-between;
-    }
-    /* Адаптивное меню */
-    .menu__icon{
-        display: block;
-        z-index: 5;
-        position: relative;
-        width: 30px;
-        height: 18px;
-        margin-right: 30px;
-        cursor: pointer;
-    }
-    .menu__icon span,
-    .menu__icon::before,
-    .menu__icon::after{
-        left: 0;
-        position: absolute;
-        height: 15%;
-        width: 100%;
-        transition: all 0.4s ease 0s;
-        background-color: #fff;
-    }
-    .menu__icon::before,
-    .menu__icon::after{
-        content: "";
-    }
-    .menu__icon::before{
-        top: 0;
-        transition: all 0.3s ease 0s;
-    }
-    .menu__icon::after{
-        bottom: 0;
-        transition: all 0.3s ease 0s;
-    }
-    .menu__icon span{
-        top: 50%;
-        transform: scale(1) translate(0px, -50%);
-    }
-    .main__sidebar{
-        left: auto;
-    }
-    .menu__container{
-        margin-left: auto;
-    }
-    .header__body{
-        background-color: #edf6ffe5;
-        z-index: 2;
-        position: fixed;
-        top: 0;
-        right: -100%;
-        width: 100%;
-        height: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        transition: all 0.3s ease 0s;
-    }
-    .header__body.active{
-        right: 0%;
-    }
-    .header__list{
-        margin-top: 30px;
-        flex-direction: column;
-    }
-    .menu__icon.active span{
-        transform: scale(0) translate(0px, -50%);
-    }
-    .menu__icon.active::before{
-        top: 50%;
-        transform: rotate(-45deg) translate(0px, -50%);
-    }
-    .menu__icon.active::after{
-        bottom: 50%;
-        transform: rotate(45deg) translate(0px, 50%);
+@media (max-width: 1000px) {
+    .menu__list{
+        grid-template-columns: 1fr;
     }
 }

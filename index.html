@@ -15,6 +15,9 @@
 
     <!-- Bootstrap icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/img/logo.svg">
 </head>
 <body class="body">
     <header class="header">
@@ -99,7 +102,7 @@
                         <div class="menu__item">
                             <a href="#" class="menu__item_content">
                                 <div class="menu__img">
-                                    <video autoplay loop="loop" muted="muted">
+                                    <video autoplay loop="loop" muted="muted" preload="auto" playsinline>
                                         <source src="video/1.mp4" type="video/mp4">
                                         Your browser does not support the video tag.
                                     </video>
@@ -122,162 +125,55 @@
                                         <div class="popup__close popup__close-grey"></div>
                                     </div>
 
-                                    <div class="popup__photos">
-                                        <div class="popup__photos_main">
-                                            <img src="img/food/1.png">
+                                    <div class="popup__top">
+                                        <div class="popup__photos">
+                                            <div class="popup__photos_main">
+                                                <img src="img/food/1.png">
+                                            </div>
+                                            <div class="popup__photos_thumbs">
+                                                <a href="img/food/1.png">
+                                                <img src="img/food/1.png">
+                                                </a>
+                                                <a href="img/food/2.jpg">
+                                                    <img src="img/food/2.jpg">
+                                                </a>
+                                                <a href="img/food/3.jpg">
+                                                    <img src="img/food/3.jpg">
+                                                </a>
+                                            </div>
                                         </div>
-                                        <div class="popup__photos_thumbs">
-                                            <a href="img/food/1.png">
-                                              <img src="img/food/1.png">
-                                            </a>
-                                            <a href="img/food/2.jpg">
-                                                <img src="img/food/2.jpg">
-                                            </a>
-                                            <a href="img/food/3.jpg">
-                                                <img src="img/food/3.jpg">
-                                            </a>
+                                        <div class="popup__info">
+                                            <div class="popup__info_text">
+                                                <p class="popup__name">Салат Цезарь</p>
+                                                <div class="rating">
+                                                    <span class="star active">&#9733;</span>
+                                                    <span class="star active">&#9733;</span>
+                                                    <span class="star active">&#9733;</span>
+                                                    <span class="star active">&#9733;</span>
+                                                    <span class="star">&#9733; </span>
+                                                    <p>&nbsp;&nbsp;(256 оценок)</p>
+                                                </div>                                              
+                                                <p class="popup__description">Заманчивый аромат копчёной курочки, свежесрезанных листьев салата и нежных чипсов хрустящего хлеба - вот что делает салат Цезарь настоящим кулинарным шедевром. Пряный соус, щедро поливающий каждый ингредиент, создаёт завораживающую симфонию вкусов. Этот салат не просто блюдо, это путешествие в мир изысканных вкусов, в котором каждый кусочек открывает новые ноты гастрономического удовольствия.</p>
+                                            </div>
+                                            <div class="popup__info_price">
+                                                <p>45 000 сум</p>
+                                            </div>
                                         </div>
                                     </div>
-                                    <div class="popup__info">
-                                        1
+                                    <div class="popup__horline">&nbsp;</div>
+                                    <div class="popup__adinfo">
+                                        <ul class="ingredients-list">
+                                            <li>Салат Романо - 200 г</li>
+                                            <li>Куриная грудка гриль - 150 г</li>
+                                            <li>Гренки - 50 г</li>
+                                            <li>Пармезан - 50 г</li>
+                                            <li>Соус Цезарь - 50 г</li>
+                                            <li>Черный перец - по вкусу</li>
+                                            <li>Соль - по вкусу (по желанию)</li>
+                                        </ul>                                                                                   
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="menu__item">
-                            <a href="#" class="menu__item_content">
-                                <div class="menu__img">
-                                    <video width="320" height="240" autoplay loop="loop" muted="muted">
-                                        <source src="video/2.mp4" type="video/mp4">
-                                        Your browser does not support the video tag.
-                                    </video>
-                                </div>
-                                <div class="menu__description">
-                                    <div class="menu__text">
-                                        <h3 class="dish__name">Цезарь</h3>
-                                        <p class="dish__description">Салат получил название не по имени Гая Юлия Цезаря, а по имени человека, наиболее часто называемого автором этого блюда — американского повара итальянского происхождения Цезаря Кардини</p>
-                                    </div>
-                                    <p class="dish_price">43 000 сум</p>
-                                </div>
-                            </a>
-                            
-                            <div class="popup">
-                                <div class="popup__content">
-                                    <div class="popup__buttons">
-                                        <div class="popup__close"></div>
-                                        <div class="popup__close popup__close-grey"></div>
-                                        <div class="popup__close popup__close-grey"></div>
-                                    </div>
-
-                                    <div class="popup__photos">
-
-                                    </div>
-                                    <div class="popup__info">
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="menu__item">
-                            <a href="#" class="menu__item_content">
-                                <div class="menu__img">
-                                    <img src="img/food/1.png" alt="">
-                                </div>
-                                <div class="menu__description">
-                                    <div class="menu__text">
-                                        <h3 class="dish__name">Цезарь</h3>
-                                        <p class="dish__description">Салат получил название не по имени Гая Юлия Цезаря, а по имени человека, наиболее часто называемого автором этого блюда — американского повара итальянского происхождения Цезаря Кардини</p>
-                                    </div>
-                                    <p class="dish_price">43 000 сум</p>
-                                </div>
-                            </a>
-                            
-                            <div class="popup">
-                                <div class="popup__content">
-                                    <div class="popup__buttons">
-                                        <div class="popup__close"></div>
-                                        <div class="popup__close popup__close-grey"></div>
-                                        <div class="popup__close popup__close-grey"></div>
-                                    </div>
-                                    <div class="popup__photos">
-
-                                    </div>
-                                    <div class="popup__info">
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="menu__category">
-                    <h2 class="category__name">Первое</h2>
-                    <div class="menu__list">
-                        <div class="menu__item">
-                            <a href="#" class="menu__item_content">
-                                <div class="menu__img">
-                                    <img src="img/food/1.png" alt="">
-                                </div>
-                                <div class="menu__description">
-                                    <div class="menu__text">
-                                        <h3 class="dish__name">Цезарь</h3>
-                                        <p class="dish__description">Салат получил название не по имени Гая Юлия Цезаря, а по имени человека, наиболее часто называемого автором этого блюда — американского повара итальянского происхождения Цезаря Кардини</p>
-                                    </div>
-                                    <p class="dish_price">43 000 сум</p>
-                                </div>
-                            </a>
-                            
-                            <div class="popup">
-                                <div class="popup__content">
-                                    <div class="popup__buttons">
-                                        <div class="popup__close"></div>
-                                        <div class="popup__close popup__close-grey"></div>
-                                        <div class="popup__close popup__close-grey"></div>
-                                    </div>
-                                    <div class="popup__photos">
-
-                                    </div>
-                                    <div class="popup__info">
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="menu__category">
-                    <h2 class="category__name">Второе</h2>
-                    <div class="menu__list">
-                        <div class="menu__item">
-                            <a href="#" class="menu__item_content">
-                                <div class="menu__img">
-                                    <img src="img/food/1.png" alt="">
-                                </div>
-                                <div class="menu__description">
-                                    <div class="menu__text">
-                                        <h3 class="dish__name">Цезарь</h3>
-                                        <p class="dish__description">Салат получил название не по имени Гая Юлия Цезаря, а по имени человека, наиболее часто называемого автором этого блюда — американского повара итальянского происхождения Цезаря Кардини</p>
-                                    </div>
-                                    <p class="dish_price">43 000 сум</p>
-                                </div>
-                            </a>
-                            
-                            <div class="popup">
-                                <div class="popup__content">
-                                    <div class="popup__buttons">
-                                        <div class="popup__close"></div>
-                                        <div class="popup__close popup__close-grey"></div>
-                                        <div class="popup__close popup__close-grey"></div>
-                                    </div>
-                                    <div class="popup__photos">
-
-                                    </div>
-                                    <div class="popup__info">
-
-                                    </div>
-                                </div>
-                            </div>
-
                         </div>
                     </div>
                 </div>

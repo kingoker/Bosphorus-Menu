@@ -4,6 +4,7 @@ document.querySelectorAll('.menu__item').forEach(function(item) {
     const popup = item.querySelector('.popup');
 
     menuItemContent.addEventListener('click', function(event) {
+        event.preventDefault(); // Предотвращаем переход по ссылке
         const computedStyle = window.getComputedStyle(popup);
         if (computedStyle.display === 'none') {
             closeAllPopups();
@@ -20,6 +21,8 @@ document.querySelectorAll('.menu__item').forEach(function(item) {
     }
 });
 
+
+
 // Close Popup
 document.querySelectorAll('.popup__close').forEach(function(closeButton) {
     closeButton.addEventListener('click', function() {
@@ -28,6 +31,7 @@ document.querySelectorAll('.popup__close').forEach(function(closeButton) {
         document.body.style.overflow = 'auto'; // Возвращаем скроллинг фона
     });
 });
+
 
 // Don't scroll
 document.querySelectorAll('.menu__item_content').forEach(function(menuItemContent) {

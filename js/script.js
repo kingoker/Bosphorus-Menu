@@ -1,3 +1,23 @@
+// фиксация логотиа и контактов
+const header = this.document.querySelector('.menu__logo');
+const topSide = this.document.querySelector('.header');
+const menuListContainer = document.querySelector('.menu__list_container');
+const headerHeight = header.offsetHeight;
+const topSideHeight = topSide.offsetHeight;
+
+window.addEventListener('scroll', function() {
+    let scrollDistance = this.window.scrollY;
+
+    if(scrollDistance >= topSideHeight){
+        header.classList.add('fixed');
+        menuListContainer.style.marginTop = `${headerHeight}px`;
+    }else{
+        header.classList.remove('fixed');
+        menuListContainer.style.marginTop = null;
+    }
+});
+  
+
 // Dish popup
 document.querySelectorAll('.menu__item').forEach(function(item) {
     const menuItemContent = item.querySelector('.menu__item_content');

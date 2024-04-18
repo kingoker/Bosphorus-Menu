@@ -85,13 +85,20 @@ img{
     background-color: rgb(242, 242, 247);
     min-height: 100vh;
 }
+.menu__container{
+    border-radius: 20px 20px 0px 0px;
+    background-color: #fff;
+    background-repeat: round;
+	background-image: url("../img/stone.jpg");
+}
 .menu__list_container{
     display: flex;
     flex-direction: column;
     gap: 100px;
+    padding-bottom: 100px;
 }
 .category__name{
-    color: rgb(174, 174, 178);
+    color: #fff;
     font-weight: 500;
     margin-bottom: 14px;
 }
@@ -105,9 +112,9 @@ img{
 .menu__logo img{
     object-fit: contain;
     margin-top: -30px;
-    background-color: rgb(242, 242, 247);
+    background-color: #6f100e;
     border-radius: 17px;
-    max-width: 200px;
+    max-width: 177px;
 }
 .menu__logo.fixed {
     position: fixed;
@@ -116,27 +123,27 @@ img{
     height: 80px;
     padding: 5px 30px;
     align-items: center;
-    background-color: #fff; /* Цвет фона вашего блока */
-    z-index: 1000; /* Установите значение z-index, чтобы блок был выше других элементов */
+    background-color: #6f100e; /* Цвет фона вашего блока */
+    z-index: 5; /* Установите значение z-index, чтобы блок был выше других элементов */
     border-radius: 0px;
     box-shadow: 0px 4px 8px 0px rgba(0,0,0,0.1);
 }  
 .menu__logo.fixed img{
     margin-top: 0px;
-    background-color: #fff;
+    background-color: #6f100e;
 }
 /* Social Links */
 .social__links{
     display: flex;
     gap: 15px;
-    margin-top: 15px;
+    margin: 15px 0px 0px 15px;
 }
 .menu__logo.fixed .social__links{
     margin-top: 0px;
 }
 .social__links a{
     font-size: 30px;
-    color: #939393;
+    color: #F6D084;
     transition: all 0.3s ease;
 }
 .social__telegram:hover{
@@ -167,6 +174,12 @@ img{
     padding: 10px;
     transition: all 0.5s ease;
     overflow: hidden;
+    background: rgba(255, 255, 255, 0.72);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(7.7px);
+    -webkit-backdrop-filter: blur(7.7px);
+    border: 1px solid rgba(255, 255, 255, 1);
 }
 .menu__item_content:hover{
     box-shadow: 0px 4px 8px 0px rgba(0,0,0,0.1);
@@ -200,7 +213,7 @@ img{
     transition: all 0.5s ease;
 }
 .menu__item_content:hover .dish__name{
-    color: rgb(255, 179, 0);
+    color: #fff;
 }
 .dish__description{
     font-size: 17px;
@@ -209,13 +222,13 @@ img{
 }
 .dish_price{
     font-size: 24px;
-    color: #a8a8a8;
+    color: #fff;
 }
 
 
 /* Menu PopUp full information */
 .popup{
-    z-index: 100;
+    z-index: 1000;
     display: none;
     position: fixed;
     top: 0px;
@@ -236,7 +249,12 @@ img{
     transform: translate(-50%, -50%);
     padding: 50px 30px 30px 30px;
     border-radius: 10px;
-    background-color: #fff;
+    background: rgba(255, 255, 255, 0.84);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(7.7px);
+    -webkit-backdrop-filter: blur(7.7px);
+    border: 1px solid rgba(255, 255, 255, 1);
     overflow: auto;
 }
 .popup__buttons{
@@ -305,7 +323,7 @@ img{
     font-size: 24px; /* Размер звёздочек */
 } 
 .star {
-    color: #ccc; /* Цвет неактивных звёздочек */
+    color: #696969; /* Цвет неактивных звёздочек */
 }
 .star.active {
     color: #ffcc00; /* Цвет активных звёздочек */
@@ -364,5 +382,8 @@ img{
     }
     .menu__logo.fixed{
         justify-content: center;
+    }
+    .social__links a{
+        font-size: 24px;
     }
 }

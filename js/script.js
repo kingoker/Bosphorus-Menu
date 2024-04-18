@@ -10,10 +10,10 @@ window.addEventListener('scroll', function() {
 
     if(scrollDistance >= topSideHeight){
         header.classList.add('fixed');
-        menuListContainer.style.marginTop = `${headerHeight}px`;
+        menuListContainer.style.paddingTop = `${headerHeight}px`;
     }else{
         header.classList.remove('fixed');
-        menuListContainer.style.marginTop = null;
+        menuListContainer.style.paddingTop = null;
     }
 });
   
